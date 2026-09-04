@@ -1,0 +1,90 @@
+% ——————————————————————————————————————————————————————————————————
+% Пакеты
+% ——————————————————————————————————————————————————————————————————
+\usepackage[T2A]{fontenc}
+\usepackage[english, main=russian]{babel}
+\usepackage{pscyr}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{framed}
+\usepackage{tikz}
+\usepackage[default]{sourceserifpro}
+\usepackage[a4paper, margin=2.5cm]{geometry}
+
+
+% ——————————————————————————————————————————————————————————————————
+% Цвета
+% ——————————————————————————————————————————————————————————————————
+\definecolor{nngblue}{HTML}{1B3A57}
+\definecolor{nnggray}{HTML}{555555}
+\definecolor{nnglink}{HTML}{385AFF}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=nnglink,
+  linkcolor=nnglink,
+  citecolor=nnglink
+}
+
+
+% ——————————————————————————————————————————————————————————————————
+% Шрифты
+% ——————————————————————————————————————————————————————————————————
+\renewcommand{\rmdefault}{ftm}
+\renewcommand{\sfdefault}{ftx}
+\renewcommand{\familydefault}{\rmdefault}
+
+\titleformat{\section}{\Large\bfseries\sffamily}{}{0pt}{}
+\titleformat{\subsection}{\large\bfseries\sffamily}{}{0pt}{}
+
+
+% ——————————————————————————————————————————————————————————————————
+% Круглое фото автора
+% ——————————————————————————————————————————————————————————————————
+\newcommand{\circlephoto}[1]{%
+  \begin{tikzpicture}
+    \path[use as bounding box] (-20bp,-20bp) rectangle (20bp,20bp);
+    \clip (0,0) circle (20bp);
+    \node {\includegraphics[height=40bp,width=40bp,keepaspectratio]{#1}};
+  \end{tikzpicture}%
+}
+
+% ——————————————————————————————————————————————————————————————————
+% Весь блок автора
+% ——————————————————————————————————————————————————————————————————
+\newcommand{\authorfont}{\fontfamily{ftx}\selectfont}
+\newcommand{\articleauthor}[3]{%
+  % Три аргумента: фото, имя и ссылка на автора \href{url}{Имя}, дата
+  \noindent
+  \begin{minipage}[c]{40bp}
+    \circlephoto{#1}
+  \end{minipage}%
+  \hspace{1em}%
+  \begin{minipage}[c]{9cm}
+    \authorfont\textbf{#2}\\
+    {\small\authorfont\color{nnggray} #3}
+  \end{minipage}
+  \vspace{1em}\par
+}
+
+% ——————————————————————————————————————————————————————————————————
+% Рамки через окружение
+% ——————————————————————————————————————————————————————————————————
+\renewenvironment{leftbar}{%
+  \def\FrameCommand{{\color{gray!50}\vrule width 1pt}\hspace{10pt}}%
+  \MakeFramed{\advance\hsize-\width \FrameRestore}%
+  \noindent
+}{%
+  \endMakeFramed
+}
+
+
+% ——————————————————————————————————————————————————————————————————
+% Оглавление без «Содержания»
+% ——————————————————————————————————————————————————————————————————
+\makeatletter
+\renewcommand{\tableofcontents}{\@starttoc{toc}}
+\makeatother

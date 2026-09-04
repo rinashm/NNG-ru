@@ -1,0 +1,42 @@
+%Экспериментальные настройки для https://www.nngroup.com/articles/design-thinking/. TODO: выпилить нумерацию в оглавлении, попробовать *ещё_раз* подобрать менее контрастную антикву с поддержкой textbf
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{import}
+\import{preamble/}{preamble}
+\graphicspath{{img/}}
+
+\begin{document}
+\title{Основы дизайн-мышления}
+
+{\noindent\sffamily\huge\bfseries Основы дизайн-мышления\par}
+\par
+\vspace{0.8em}
+\articleauthor{design-thinking-author.jpg}{\href{https://www.nngroup.com/articles/author/sarah-gibbons/}{Сара Гиббонс}}{31 июля 2016 г. \(\cdot\) Пересмотрено 15 июля 2026 г.}
+
+\begin{leftbar}
+	\large{\textbf{Summary:} Design thinking is a user-centered process that helps teams understand needs, generate ideas, test solutions, and drive innovation.}
+\end{leftbar}
+
+\vspace{0.8em}
+\noindent
+\large{\textbf{{In This Article}} %Нужно вывести «Содержание из окружения leftbar.
+\vspace{-0.8em}
+\begin{leftbar}
+	\tableofcontents
+\end{leftbar}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{Design-thinking-101-NNG.pdf}
+	\caption{\href{https://media.nngroup.com/media/articles/attachments/Design-thinking-101-NNG.pdf}{Design Thinking(PDF)}}
+	\label{pic:poster}
+\end{figure}
+
+\section{Definition of Design Thinking}
+\section{Process}
+\section{Why — The Advantage}
+\section{Flexibility — Adapt to Fit Your Needs}
+\section{Scalability — Think Bigger}
+\section{History of Design Thinking }
+
+\end{document}
