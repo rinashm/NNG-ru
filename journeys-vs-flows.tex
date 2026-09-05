@@ -1,44 +1,40 @@
-%Это~"--- заготовка для перевода статьи о~User Journeys и~User Flows. https://www.nngroup.com/articles/user"=journeys"=vs"=user"=flows/ В~ходе перевода улетела в~кроличью нору перекрестных ссылок о~методологиях дизайн"=мышления. Сначала переведу Design Thinking.
+% ——————————————————————————————————————————————————————————————————
+%Это~"--- заготовка для перевода статьи о~User Journeys и~User Flows. https://www.nngroup.com/articles/user"=journeys"=vs"=user"=flows/ В~ходе перевода улетела в~кроличью нору перекрестных ссылок о~методологиях дизайн"=мышления. Вернусь после перевода Design Thinking.
 
-\documentclass[a4paper,12pt]{article}
-\usepackage[T2A]{fontenc}
-\usepackage[english, main=russian]{babel}
-\usepackage{pscyr}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\renewcommand{\familydefault}{fac}
+%Нужно как-то систематизировать англицизмы — делать ли курсив
+% ——————————————————————————————————————————————————————————————————
+\documentclass[12pt]{article}
+
+\usepackage{import}
+\import{preamble/}{preamble}
+\graphicspath{{img/}}
+
 \begin{document}
-
 \title{User~Journeys vs. User~Flows}
-\author{Kate Kaplan}
-\date{актуально на 27~августа 2026}
 
-\maketitle
+{\noindent\sffamily\huge\bfseries User~Journeys vs. User~Flows\par}
+\par
+\vspace{0.8em}
+\articleauthor{journeys-flows-author}{\href{https://www.nngroup.com/articles/author/kate-kaplan/}{Кейт Каплан}}{16 апреля 2023 г. \(\cdot\) Пересмотрено 27 августа 2026 г.}
 
-\textit{User journeys} и~\textit{user flows}~"--- инструменты UX, которые охватывают то, как люди достигают целей с~помощью конкретных продуктов и~сервисов. У~них есть схожие черты. И~user journey и~user flow:
+% ——————————————————————————————————————————————————————————————————
+%Далее и ниже идут костыли для жирного начертания. Да простят меня все те, кто будет когда-либо читать исходник
+% ——————————————————————————————————————————————————————————————————
 
-\begin{enumerate}
-	\item Используются во время этапа
-		\footnote{
-			\textit{Ideation} или «генерация идей»"--- один из этапов применения дизайн"=мышления по методологии \textit{Hasso Plattner Institute of Design (d.school)}. Переводчица копала до первоисточников, а~оказалось, что у~NNG уже есть \href{https://www.nngroup.com/articles/design"=thinking/}{статья о~дизайн"=мышлении.} Упс! :) 
-			\par
-			Традиционно выделяют пять этапов дизайн"=мышления, NNG добавляет шестой: 
-				\begin{enumerate}
-					\item Empathize~"--- эмпатия
-					\item Define~"--- анализ и~определение проблемы
-					\item Ideate~"--- генерация идей
-					\item Prototype~"--- прототипирование
-					\item Test~"--- тестирование
-					\item Implement~"--- внедрение
-				\end{enumerate} 
-			\href{https://designthinking.ideo.com/process}{IDEO выделяет семь других этапов}: \textit{Frame the question, Gather inspiration, Synthesize for action, Generate ideas, Make ideas tangible, Test to learn, Share the story.}
-			\par
-			Как большая поклонница мюзикла \textit{Wicked} и~теоретик, переводчица считает, что нужно упомянуть термин \textit{\href{https://ixdf.org/literature/topics/wicked"=problems}{Wicked Problems}}. Это термин 1960"=x,~описывающий сложные задачи, которые сложно определить, у~которых нет единого решения, явного финала и~фиксированных требований. Хорст Риттель и~Мелвин Уэббер сформулировали десять принципов \textit{\href{https://www.sympoetic.net/Managing\_Complexity/complexity\_files/1973\%20Rittel\%20and\%20Webber\%20Wicked\%20Problems.pdf}{wicked problems}}, применимо в~контексте социального планирования. \href{https://www.researchgate.net/publication/251880127\_Wicked\_Problems\_in\_Design\_Thinking}{Ричард Буканан развил эту идею}, и~предположил, что к~ним относится большинство задач дизайнера. Это происходит, потому что каждый раз дизайнер переизобретает предмет дизайна для конкретной ситуации.
-		}
-		генерации идей или оценки, с~целью понять и~оптимизировать пользовательский опыт.
+\begin{leftbar}
+	\large{{\fontseries{b}\selectfont Кратко:} И user journeys, и user flows описывают процесс того, как пользователи достигают своих целей, но отличаются по масштабу, назначению и формату}
+\end{leftbar}
+
+User journeys и~user flows~"--- инструменты UX, которые охватывают то, как люди достигают целей с~помощью конкретных продуктов и~сервисов. У~них есть схожие черты. И~user journey и~user flow:
+   
+\begin{itemize}
+	\item Используются во время этапа генерации идей (Ideate)\footnote{Ideation или «генерация идей»~"--- один из этапов применения дизайн"=мышления по методологии Hasso Plattner Institute of Design (d.school). Подробнее рассказано \href{https://www.nngroup.com/articles/design"=thinking/}{в статье~NNG о~дизайн-мышлении}. Эти принципы не универсальны: например, IDEO, популяризаторы это, выделяют \href{https://designthinking.ideo.com/process}{семь других этапов.}
+	\par
+	Тут же упомянем термин \textit{\href{https://www.sympoetic.net/Managing\_Complexity/complexity\_files/1973\%20Rittel\%20and\%20Webber\%20Wicked\%20Problems.pdf}{wicked problems}}. Это определение 1960"=x,~описывающий сложные задачи, которые сложно определить, у~которых нет единого решения, явного финала и~фиксированных требований. Хорст Риттель и~Мелвин Уэббер сформулировали десять принципов wicked problems, в~контексте социального планирования. \href{https://www.researchgate.net/publication/251880127\_Wicked\_Problems\_in\_Design\_Thinking}{Ричард Буканан развил эту идею,} и~предположил, что к~ним относится большинство задач дизайнера. Это происходит, потому что каждый раз дизайнер переизобретает предмет дизайна для конкретной ситуации.
+	\par
+	Прощу прощения за такое количество ссылок в сноске~"--- история дизайн-мышления оказалась очень интересной :)} генерации идей или оценки, с~целью понять и~оптимизировать пользовательский опыт.
 	\item Построены вокруг цели пользователя и~изучаются с~точки зрения пользователя или потребителя (а~не компании или продукта).
-	\item Описываются и~визуализируются с~помощью карт.
-
-\end{enumerate}
+	\item Описываются и~визуализируются с~помощью UX-картирования
+\end{itemize}
 
 \end{document}
