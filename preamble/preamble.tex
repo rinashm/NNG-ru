@@ -11,7 +11,9 @@
 \usepackage{titletoc}
 \usepackage{framed}
 \usepackage{tikz}
-\usepackage[default]{sourceserifpro}
+\usepackage[inline]{enumitem}
+\usepackage{float}
+\usepackage{titletoc}
 \usepackage[a4paper, margin=2.5cm]{geometry}
 
 
@@ -70,6 +72,7 @@
   \vspace{1em}\par
 }
 
+
 % ——————————————————————————————————————————————————————————————————
 % Рамки через окружение
 % ——————————————————————————————————————————————————————————————————
@@ -81,10 +84,16 @@
   \endMakeFramed
 }
 
+% ——————————————————————————————————————————————————————————————————
+% Визуал содержания
+% ——————————————————————————————————————————————————————————————————
+\titlecontents{section}
+  [0pt]
+  {\vspace{12pt}\normalfont}
+  {}
+  {}
+  {}
 
-% ——————————————————————————————————————————————————————————————————
-% Оглавление без «Содержания»
-% ——————————————————————————————————————————————————————————————————
 \makeatletter
 \renewcommand{\tableofcontents}{\@starttoc{toc}}
 \makeatother
