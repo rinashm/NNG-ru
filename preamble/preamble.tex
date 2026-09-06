@@ -13,6 +13,7 @@
 \usepackage[inline]{enumitem}
 \usepackage{float}
 \usepackage{titletoc}
+%\usepackage{indentfirst} --- некрасиво :c
 \usepackage[a4paper, margin=2.5cm]{geometry}
 
 
@@ -32,14 +33,28 @@
 
 
 % ——————————————————————————————————————————————————————————————————
-% Шрифты
+% Типографика
 % ——————————————————————————————————————————————————————————————————
 \renewcommand{\rmdefault}{ftm}
 \renewcommand{\sfdefault}{ftx}
 \renewcommand{\familydefault}{\rmdefault}
 
-\titleformat{\section}{\Large\bfseries\sffamily}{}{0pt}{}
-\titleformat{\subsection}{\large\bfseries\sffamily}{}{0pt}{}
+\titleformat{\section}
+  {\Large\bfseries\sffamily}
+  {}
+  {0pt}
+  {}
+  [\vspace{-\parskip}]
+
+\titleformat{\subsection}
+  {\large\bfseries\sffamily}
+  {}
+  {0pt}
+  {}
+  [\vspace{-\parskip}]
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
 
 
 % ——————————————————————————————————————————————————————————————————
@@ -88,7 +103,7 @@
 % ——————————————————————————————————————————————————————————————————
 \titlecontents{section}
   [0pt]
-  {\vspace{12pt}\normalfont}
+  {\normalfont}
   {}
   {}
   {}
