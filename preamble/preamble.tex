@@ -113,4 +113,22 @@
 \renewcommand{\tableofcontents}{\@starttoc{toc}}
 \makeatother
 
+% Определения
+\newcommand*{\tdef}[1]{%
+	\textit{#1}%
+}
+
+\newcommand*{\subtitle}[1]{%
+	\par
+	\noindent
+	\begingroup
+		\sffamily
+		\huge
+		\bfseries 
+		#1%
+		\par
+	\endgroup
+	\vspace{0.8em}%
+}
+
 % vim:ts=2:sw=2
