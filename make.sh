@@ -1,7 +1,8 @@
 #!/bin/bash
 
 name="design-thinking"
-outdir="/tmp/$name"
+dir="$(pwd | sed -E 's|^.*/||')"
+outdir="/tmp/$dir"
 
 do_pdflatex() {
 	pdflatex \
