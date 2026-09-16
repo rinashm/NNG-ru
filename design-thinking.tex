@@ -10,7 +10,15 @@
 \import{preamble/}{preamble}
 \graphicspath{{img/}}
 
+\AtBeginDocument{%
+	% Минимальное число букв до переноса
+	\lefthyphenmin=3
+	% Минимальное число букв после переноса
+	\righthyphenmin=3
+}
+
 \begin{document}
+
 \title{Основы дизайн"=мышления}
 \subtitle{Основы дизайн"=мышления}
 
@@ -162,7 +170,7 @@
 	https://www.nngroup.com/articles/the-myth-of-the-genius-designer/%
 }{%
 	«Восхитительный интерфейс, решающий не ту
-	задачу,\mbox{провалится»}
+	задачу, провалится»%
 }%
 \footnote{%
 	«A~wonderful interface solving the wrong problem will fail».%
